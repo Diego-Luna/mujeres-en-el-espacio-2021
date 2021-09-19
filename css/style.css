@@ -1,0 +1,19 @@
+* {
+  margin: 0%;
+  padding: 0;
+}
+
+.seccion-principal {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../img/Fondo_bh@2x.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
