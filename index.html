@@ -7,20 +7,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mujeres en el espacio</title>
 
+  <link rel="stylesheet" href="./css/animaciones.css">
   <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
 <body>
 
-  <section class="seccion-principal">
+  <header class="header-principal">
     <div>
       <h1>Saturno 5</h1>
-      <h2>El cohete que nos llevo a la luna</h2>
+      <div>
+        <h2 class="">El cohete que nos llevo a la luna</h2>
+      </div>
     </div>
-  </section>
+  </header>
 
-  <script src="./js"></script>
+  <main>
+    <div class="sona-animacion-relativa">
+      <div class="section-item-left container-text ">
+        <h4>Saturno V</h4>
+        <div class="Animacion-container-seccion-title">
+          <h3 id="animation-title-01" class="animation-title ">Información</h3>
+          <h3 id="animation-title-02" class="animation-title ">La primera fase</h3>
+          <h3 id="animation-title-03" class="animation-title ">La segunda fase</h3>
+          <h3 id="animation-title-04" class="animation-title ">La tercera fase</h3>
+          <h3 id="animation-title-05" class="animation-title ">Información</h3>
+        </div>
+
+        <div class="Animacion-container-seccion-description-left">
+          <p id="animation-description-01" class="text-description-left">
+            Es una de las máquinas más <br />
+            impresionantes de la
+            historia <br /> humana
+          </p>
+          <p id="animation-description-05" class="text-description-left">
+            Altura               1106m <br />
+            Diámetro             101m <br />
+            Masa                 2970000kg^2 <br />
+            Carga útil a LEO     140000kg^3 <br />
+          </p>
+        </div>
+      </div>
+      <div class="section-item-center Animacion-container-seccion-img">
+        <img id="animation-img-01" class="" src="./img/saturnoV/SaturnoV_1.png" alt="SaturnoV 1">
+        <img id="animation-img-02" class="" src="./img/saturnoV/SaturnoV_2.png" alt="SaturnoV 2">
+        <img id="animation-img-03" class="" src="./img/saturnoV/SaturnoV_3.png" alt="SaturnoV 3">
+        <img id="animation-img-04" class="" src="./img/saturnoV/SaturnoV_4.png" alt="SaturnoV 4">
+        <img id="animation-img-05" class="" src="./img/saturnoV/SaturnoV_5.png" alt="SaturnoV 5">
+      </div>
+      <div class="section-item-right Animacion-container-seccion-description-right">
+        <p id="animation-description-02" class="text-description-right">
+          Fue usados en las mismas misiones del <b>Apolo</b> <br />
+          <b>8</b> a <b>Apolo 17</b>
+        </p>
+        <p id="animation-description-03" class="text-description-right">
+          El 97% de su peso es combustible.
+        </p>
+        <p id="animation-description-04" class="text-description-right">
+          Puede llevar 118 toneladas a la<br />
+          órbita baja
+        </p>
+
+      </div>
+    </div>
+
+    <section id="animacion-on-1"></section>
+    <section id="animacion-on-2"></section>
+    <section id="animacion-on-3"></section>
+    <section id="animacion-on-4"></section>
+  </main>
+
+  <footer>
+    <p>Explora nuevos horizontes</p>
+  </footer>
+
+
+  <script src="./js/callback_IntersectionObserver.js"></script>
+  <script src="./js/index.js"></script>
 
 </body>
 
