@@ -1,0 +1,24 @@
+.animacion-salida-izquierda {
+  /* animation: 2.5s side-content-img 0.5s ease-in-out; */
+  animation-name: animacion-salida-izquierda;
+  animation-duration: 1s; /* 2.5s */
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.animacion-salida-izquierda {
+  /* animation: 2.5s side-content-img 0.5s ease-in-out; */
+  animation-name: animacion-salida-izquierda;
+  animation-duration: 1s; /* 2.5s */
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animacion-salida-izquierda {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-300px);
+  }
+}
