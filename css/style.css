@@ -147,7 +147,7 @@ img {
 .Animacion-container-seccion-description-right {
   top: 30%;
 }
-.Animacion-container-seccion-description-right{
+.Animacion-container-seccion-description-right {
   right: 10%;
 }
 
@@ -163,6 +163,36 @@ img {
 #animation-img-04,
 #animation-img-05 {
   opacity: 0;
+}
+
+#animation-title-01,
+#animation-description-01,
+#animation-img-01 {
+  z-index: 10;
+}
+#animation-title-02,
+#animation-description-02,
+#animation-img-02 {
+  z-index: 9;
+}
+#animation-title-03,
+#animation-description-03,
+#animation-img-03 {
+  z-index: 8;
+}
+#animation-title-04,
+#animation-description-04,
+#animation-img-04 {
+  z-index: 7;
+}
+#animation-title-05,
+#animation-description-05,
+#animation-img-05 {
+  z-index: 6;
+}
+
+#animation-img-05 {
+  width: 150%;
 }
 
 #animation-description-02,

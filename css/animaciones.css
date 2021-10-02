@@ -5,6 +5,8 @@
 }
 
 /* -> desplasamiento */
+.animacion-desplasamiento-entrada-derecha,
+.animacion-desplasamiento-salida-derecha,
 .animacion-entrada-derecha,
 .animacion-salida-derecha,
 .animacion-entrada-izquierda,
@@ -28,6 +30,14 @@
   animation-name: animacion-salida-derecha;
 }
 
+.animacion-desplasamiento-entrada-derecha {
+  animation-name: animacion-desplasamiento-entrada-derecha;
+}
+
+.animacion-desplasamiento-salida-derecha {
+  animation-name: animacion-desplasamiento-salida-derecha;
+}
+
 /* -> opacidad */
 .animacion-opacidad-no-visible,
 .animacion-opacidad-visible {
@@ -37,6 +47,7 @@
 }
 
 .animacion-opacidad-no-visible {
+  animation-duration: 0.35s;
   animation-name: animacion-opacidad-no-visible;
 }
 .animacion-opacidad-visible {
@@ -50,6 +61,7 @@
 @keyframes animacion-salida-izquierda {
   0% {
     transform: translateX(0px);
+    opacity: 1;
   }
   100% {
     transform: translateX(-300px);
@@ -61,6 +73,7 @@
   }
   100% {
     transform: translateX(0px);
+    opacity: 1;
   }
 }
 
@@ -80,11 +93,40 @@
     opacity: 1;
   }
   50% {
-    transform: translateX(0px);
+    /* transform: translateX(0px); */
     opacity: 0;
   }
   100% {
     transform: translateX(300px);
+    opacity: 0;
+  }
+}
+
+@keyframes animacion-desplasamiento-entrada-derecha {
+  0% {
+    transform: translateX(0px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(150px);
+    opacity: 1;
+  }
+}
+
+@keyframes animacion-desplasamiento-salida-derecha {
+  0% {
+    transform: translateX(150px);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 0;
   }
 }
 
