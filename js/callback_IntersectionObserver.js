@@ -63,6 +63,8 @@ function callback_animacion_01(entries, observer) {
 
       img_animation_01.classList.remove("animacion-opacidad-no-visible");
       img_animation_01.classList.add("animacion-opacidad-visible");
+
+      animacion_2_activation = false;
     }
   } else {
     // console.log("no Animar 1");
@@ -74,8 +76,8 @@ function callback_animacion_02(entries, observer) {
     if (animacion_2_activation === false) {
       console.log("---> on animacion 2");
 
-      title_animation_03.classList.remove("animacion-opacidad-visible");
-      title_animation_03.classList.add("animacion-opacidad-no-visible");
+      // title_animation_03.classList.remove("animacion-opacidad-visible");
+      // title_animation_03.classList.add("animacion-opacidad-no-visible");
 
       title_animation_01.classList.remove("animacion-opacidad-visible");
       title_animation_01.classList.add("animacion-opacidad-no-visible");
@@ -89,8 +91,8 @@ function callback_animacion_02(entries, observer) {
       description_animation_02.classList.remove("animacion-salida-derecha");
       description_animation_02.classList.add("animacion-entrada-derecha");
 
-      img_animation_03.classList.remove("animacion-opacidad-visible");
-      img_animation_03.classList.add("animacion-opacidad-no-visible");
+      // img_animation_03.classList.remove("animacion-opacidad-visible");
+      // img_animation_03.classList.add("animacion-opacidad-no-visible");
 
       img_animation_01.classList.remove("animacion-opacidad-visible");
       img_animation_01.classList.add("animacion-opacidad-no-visible");
@@ -99,6 +101,8 @@ function callback_animacion_02(entries, observer) {
       img_animation_02.classList.add("animacion-opacidad-visible");
 
       animacion_2_activation = true;
+
+      animacion_3_activation = false;
     } else {
       console.log("---> off animacion 2");
       title_animation_01.classList.remove("animacion-opacidad-visible");
@@ -129,6 +133,8 @@ function callback_animacion_02(entries, observer) {
       img_animation_02.classList.add("animacion-opacidad-visible");
 
       animacion_2_activation = false;
+
+      animacion_3_activation = false;
     }
   } else {
     // console.log("no Animar 2");
@@ -146,8 +152,8 @@ function callback_animacion_03(entries, observer) {
       title_animation_03.classList.remove("animacion-opacidad-no-visible");
       title_animation_03.classList.add("animacion-opacidad-visible");
 
-      title_animation_04.classList.remove("animacion-opacidad-visible");
-      title_animation_04.classList.add("animacion-opacidad-no-visible");
+      // title_animation_04.classList.remove("animacion-opacidad-visible");
+      // title_animation_04.classList.add("animacion-opacidad-no-visible");
 
       description_animation_02.classList.remove("animacion-entrada-derecha");
       description_animation_02.classList.add("animacion-salida-derecha");
@@ -155,8 +161,8 @@ function callback_animacion_03(entries, observer) {
       description_animation_03.classList.remove("animacion-salida-derecha");
       description_animation_03.classList.add("animacion-entrada-derecha");
 
-      description_animation_04.classList.remove("animacion-entrada-derecha");
-      description_animation_04.classList.add("animacion-salida-derecha");
+      // description_animation_04.classList.remove("animacion-entrada-derecha");
+      // description_animation_04.classList.add("animacion-salida-derecha");
 
       img_animation_02.classList.remove("animacion-opacidad-visible");
       img_animation_02.classList.add("animacion-opacidad-no-visible");
@@ -164,14 +170,34 @@ function callback_animacion_03(entries, observer) {
       img_animation_03.classList.remove("animacion-opacidad-no-visible");
       img_animation_03.classList.add("animacion-opacidad-visible");
 
-      img_animation_04.classList.remove("animacion-opacidad-visible");
-      img_animation_04.classList.add("animacion-opacidad-no-visible");
+      // img_animation_04.classList.remove("animacion-opacidad-visible");
+      // img_animation_04.classList.add("animacion-opacidad-no-visible");
 
-      // animacion_3_activation = true;
+      animacion_2_activation = true;
+      animacion_3_activation = true;
     } else {
       console.log("---> off animacion 3");
 
+      title_animation_04.classList.remove("animacion-opacidad-visible");
+      title_animation_04.classList.add("animacion-opacidad-no-visible");
+
+      title_animation_03.classList.remove("animacion-opacidad-no-visible");
+      title_animation_03.classList.add("animacion-opacidad-visible");
+
+      description_animation_04.classList.remove("animacion-entrada-derecha");
+      description_animation_04.classList.add("animacion-salida-derecha");
+
+      description_animation_03.classList.remove("animacion-salida-derecha");
+      description_animation_03.classList.add("animacion-entrada-derecha");
+
+      img_animation_04.classList.remove("animacion-opacidad-visible");
+      img_animation_04.classList.add("animacion-opacidad-no-visible");
+
+      img_animation_03.classList.remove("animacion-opacidad-no-visible");
+      img_animation_03.classList.add("animacion-opacidad-visible");
+
       animacion_3_activation = false;
+      animacion_4_activation = false;
     }
   } else {
     // console.log("no Animar 3");
@@ -180,9 +206,6 @@ function callback_animacion_03(entries, observer) {
 
 function callback_animacion_04(entries, observer) {
   if (entries[0].isIntersecting) {
-    console.log("--> animacion_4_activation");
-    console.log(animacion_4_activation);
-
     if (animacion_4_activation === false) {
       console.log("---> on animacion 4");
 
@@ -192,8 +215,8 @@ function callback_animacion_04(entries, observer) {
       title_animation_04.classList.remove("animacion-opacidad-no-visible");
       title_animation_04.classList.add("animacion-opacidad-visible");
 
-      title_animation_05.classList.remove("animacion-opacidad-visible");
-      title_animation_05.classList.add("animacion-opacidad-no-visible");
+      // title_animation_05.classList.remove("animacion-opacidad-visible");
+      // title_animation_05.classList.add("animacion-opacidad-no-visible");
 
       description_animation_03.classList.remove("animacion-entrada-derecha");
       description_animation_03.classList.add("animacion-salida-derecha");
@@ -214,31 +237,33 @@ function callback_animacion_04(entries, observer) {
       //   "animacion-desplasamiento-entrada-derecha"
       // );
 
+      animacion_3_activation = true;
       animacion_4_activation = true;
     } else {
       console.log("---> off animacion 4");
 
-      title_animation_04.classList.remove("animacion-opacidad-no-visible");
-      title_animation_04.classList.add("animacion-opacidad-visible");
-
       title_animation_05.classList.remove("animacion-opacidad-visible");
       title_animation_05.classList.add("animacion-opacidad-no-visible");
 
-      description_animation_04.classList.remove("animacion-salida-derecha");
-      description_animation_04.classList.add("animacion-entrada-derecha");
+      title_animation_04.classList.remove("animacion-opacidad-no-visible");
+      title_animation_04.classList.add("animacion-opacidad-visible");
 
       description_animation_05.classList.remove("animacion-entrada-izquierda");
       description_animation_05.classList.add("animacion-salida-izquierda");
 
-      img_animation_04.classList.remove("animacion-opacidad-no-visible");
-      img_animation_04.classList.add("animacion-opacidad-visible");
+      description_animation_04.classList.remove("animacion-salida-derecha");
+      description_animation_04.classList.add("animacion-entrada-derecha");
 
       img_animation_05.classList.remove(
         "animacion-desplasamiento-entrada-derecha"
       );
       img_animation_05.classList.add("animacion-desplasamiento-salida-derecha");
 
-      // animacion_4_activation = false;
+      img_animation_04.classList.remove("animacion-opacidad-no-visible");
+      img_animation_04.classList.add("animacion-opacidad-visible");
+
+      animacion_4_activation = false;
+      animacion_5_activation = false;
     }
   } else {
     // console.log("no Animar 4");
@@ -273,7 +298,6 @@ function callback_animacion_05(entries, observer) {
         "animacion-desplasamiento-entrada-derecha"
       );
 
-      // animacion_5_activation = true;
       animacion_4_activation = true;
     } else {
       console.log("---> off animacion 5");
