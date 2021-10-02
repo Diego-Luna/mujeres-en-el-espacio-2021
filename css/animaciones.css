@@ -1,18 +1,42 @@
+/* --> Classes */
+
+.opacity-cero {
+  opacity: 0;
+}
+
+/* -> desplasamiento */
+.animacion-entrada-izquierda,
 .animacion-salida-izquierda {
-  /* animation: 2.5s side-content-img 0.5s ease-in-out; */
-  animation-name: animacion-salida-izquierda;
   animation-duration: 1s; /* 2.5s */
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.animacion-salida-izquierda {
+  animation-name: animacion-salida-izquierda;
+}
+
+.animacion-entrada-izquierda {
+  animation-name: animacion-entrada-izquierda;
+}
+
+/* -> opacidad */
+.animacion-opacidad-no-visible,
+.animacion-opacidad-visible {
+  animation-duration: 0.5s; /* 2.5s */
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
 
-.animacion-salida-izquierda {
-  /* animation: 2.5s side-content-img 0.5s ease-in-out; */
-  animation-name: animacion-salida-izquierda;
-  animation-duration: 1s; /* 2.5s */
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
+.animacion-opacidad-no-visible {
+  animation-name: animacion-opacidad-no-visible;
 }
+.animacion-opacidad-visible {
+  animation-name: animacion-opacidad-visible;
+}
+
+/* --> keyframes */
+
+/* -> desplasamiento */
 
 @keyframes animacion-salida-izquierda {
   0% {
@@ -20,5 +44,32 @@
   }
   100% {
     transform: translateX(-300px);
+  }
+}
+@keyframes animacion-entrada-izquierda {
+  0% {
+    transform: translateX(-300px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* -> opacidad */
+
+@keyframes animacion-opacidad-no-visible {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes animacion-opacidad-visible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
