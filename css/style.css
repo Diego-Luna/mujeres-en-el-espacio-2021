@@ -107,6 +107,21 @@ img {
   text-align: center;
 }
 
+.tex-info {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  max-width: 360px;
+  min-width: 300px;
+}
+.tex-info p {
+  width: 50%;
+  border-bottom: 1px solid white;
+}
+.text-value {
+  text-align: right;
+}
+
 .section-item-right,
 .section-item-left {
   padding: 5% 0 0 5%;
@@ -190,6 +205,12 @@ img {
 #animation-img-05 {
   z-index: 6;
 }
+
+/* #animation-description-05 {
+  word-spacing: 5px;
+  text-decoration: underline;
+  line-height: 30px;
+} */
 
 #animation-img-05 {
   width: 150%;
