@@ -5,18 +5,27 @@
 }
 
 /* -> desplasamiento */
+.animacion-entrada-derecha,
+.animacion-salida-derecha,
 .animacion-entrada-izquierda,
 .animacion-salida-izquierda {
   animation-duration: 1s; /* 2.5s */
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
+
 .animacion-salida-izquierda {
   animation-name: animacion-salida-izquierda;
 }
-
 .animacion-entrada-izquierda {
   animation-name: animacion-entrada-izquierda;
+}
+
+.animacion-entrada-derecha {
+  animation-name: animacion-entrada-derecha;
+}
+.animacion-salida-derecha {
+  animation-name: animacion-salida-derecha;
 }
 
 /* -> opacidad */
@@ -54,6 +63,25 @@
     transform: translateX(0px);
   }
 }
+
+@keyframes animacion-entrada-derecha {
+  0% {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+/* @keyframes animacion-salida-derecha {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(300px);
+  }
+} */
 
 /* -> opacidad */
 

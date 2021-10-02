@@ -147,6 +147,9 @@ img {
 .Animacion-container-seccion-description-right {
   top: 30%;
 }
+.Animacion-container-seccion-description-right{
+  right: 10%;
+}
 
 #animation-title-02,
 #animation-title-03,

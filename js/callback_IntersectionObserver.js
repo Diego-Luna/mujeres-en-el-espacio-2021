@@ -54,6 +54,9 @@ function callback_animacion_01(entries, observer) {
       description_animation_01.classList.remove("animacion-salida-izquierda");
       description_animation_01.classList.add("animacion-entrada-izquierda");
 
+      description_animation_02.classList.remove("animacion-entrada-derecha");
+      description_animation_02.classList.add("animacion-opacidad-no-visible");
+
       img_animation_01.classList.remove("animacion-opacidad-no-visible");
       img_animation_01.classList.add("animacion-opacidad-visible");
 
@@ -82,6 +85,9 @@ function callback_animacion_02(entries, observer) {
       description_animation_01.classList.remove("animacion-entrada-izquierda");
       description_animation_01.classList.add("animacion-salida-izquierda");
 
+      description_animation_02.classList.remove("animacion-opacidad-no-visible");
+      description_animation_02.classList.add("animacion-entrada-derecha");
+
       img_animation_01.classList.remove("animacion-opacidad-visible");
       img_animation_01.classList.add("animacion-opacidad-no-visible");
 
@@ -105,6 +111,9 @@ function callback_animacion_02(entries, observer) {
 
       description_animation_01.classList.remove("animacion-entrada-izquierda");
       description_animation_01.classList.add("animacion-salida-izquierda");
+
+      description_animation_02.classList.remove("animacion-opacidad-no-visible");
+      description_animation_02.classList.add("animacion-entrada-derecha");
 
       img_animation_01.classList.remove("animacion-opacidad-visible");
       img_animation_01.classList.add("animacion-opacidad-no-visible");
