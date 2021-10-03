@@ -1,3 +1,4 @@
+var animacion_0_activation = false;
 var animacion_1_activation = false;
 var animacion_2_activation = false;
 var animacion_3_activation = false;
@@ -34,11 +35,41 @@ var img_animation_05 = document.getElementById("animation-img-05");
 
 // --> funciones a ejecutar del IntersectionObserver
 
+function callback_animacion_00(entries, observer) {
+  if (entries[0].isIntersecting) {
+    // ->  Si la animacion_1_activation es false es que todavia no se a echo la animacion, y si es true hay que hacer la hacia atras
+    if (animacion_0_activation === false) {
+      console.log("---> on animacion 0");
+
+      title_animation_01.classList.remove("animacion-opacidad-no-visible");
+      title_animation_01.classList.add("animacion-opacidad-visible");
+
+      description_animation_01.classList.remove("animacion-salida-izquierda");
+      description_animation_01.classList.add("animacion-entrada-izquierda");
+
+      img_animation_01.classList.remove("animacion-opacidad-no-visible");
+      img_animation_01.classList.add("animacion-opacidad-visible");
+
+      animacion_0_activation = true;
+    }
+  } else {
+    // console.log("no Animar 1");
+  }
+}
 function callback_animacion_01(entries, observer) {
   if (entries[0].isIntersecting) {
     // ->  Si la animacion_1_activation es false es que todavia no se a echo la animacion, y si es true hay que hacer la hacia atras
     if (animacion_1_activation === false) {
       console.log("---> on animacion 1");
+
+      title_animation_01.classList.remove("animacion-opacidad-no-visible");
+      title_animation_01.classList.add("animacion-opacidad-visible");
+
+      description_animation_01.classList.remove("animacion-salida-izquierda");
+      description_animation_01.classList.add("animacion-entrada-izquierda");
+
+      img_animation_01.classList.remove("animacion-opacidad-no-visible");
+      img_animation_01.classList.add("animacion-opacidad-visible");
 
       animacion_1_activation = true;
     } else {
@@ -76,9 +107,6 @@ function callback_animacion_02(entries, observer) {
     if (animacion_2_activation === false) {
       console.log("---> on animacion 2");
 
-      // title_animation_03.classList.remove("animacion-opacidad-visible");
-      // title_animation_03.classList.add("animacion-opacidad-no-visible");
-
       title_animation_01.classList.remove("animacion-opacidad-visible");
       title_animation_01.classList.add("animacion-opacidad-no-visible");
 
@@ -90,9 +118,6 @@ function callback_animacion_02(entries, observer) {
 
       description_animation_02.classList.remove("animacion-salida-derecha");
       description_animation_02.classList.add("animacion-entrada-derecha");
-
-      // img_animation_03.classList.remove("animacion-opacidad-visible");
-      // img_animation_03.classList.add("animacion-opacidad-no-visible");
 
       img_animation_01.classList.remove("animacion-opacidad-visible");
       img_animation_01.classList.add("animacion-opacidad-no-visible");
@@ -105,8 +130,6 @@ function callback_animacion_02(entries, observer) {
       animacion_3_activation = false;
     } else {
       console.log("---> off animacion 2");
-      title_animation_01.classList.remove("animacion-opacidad-visible");
-      title_animation_01.classList.add("animacion-opacidad-no-visible");
 
       title_animation_03.classList.remove("animacion-opacidad-visible");
       title_animation_03.classList.add("animacion-opacidad-no-visible");
@@ -114,17 +137,11 @@ function callback_animacion_02(entries, observer) {
       title_animation_02.classList.remove("animacion-opacidad-no-visible");
       title_animation_02.classList.add("animacion-opacidad-visible");
 
-      description_animation_01.classList.remove("animacion-entrada-izquierda");
-      description_animation_01.classList.add("animacion-salida-izquierda");
-
       description_animation_03.classList.remove("animacion-entrada-derecha");
       description_animation_03.classList.add("animacion-salida-derecha");
 
       description_animation_02.classList.remove("animacion-salida-derecha");
       description_animation_02.classList.add("animacion-entrada-derecha");
-
-      img_animation_01.classList.remove("animacion-opacidad-visible");
-      img_animation_01.classList.add("animacion-opacidad-no-visible");
 
       img_animation_03.classList.remove("animacion-opacidad-visible");
       img_animation_03.classList.add("animacion-opacidad-no-visible");
@@ -132,8 +149,9 @@ function callback_animacion_02(entries, observer) {
       img_animation_02.classList.remove("animacion-opacidad-no-visible");
       img_animation_02.classList.add("animacion-opacidad-visible");
 
-      animacion_2_activation = false;
+      animacion_1_activation = true;
 
+      animacion_2_activation = false;
       animacion_3_activation = false;
     }
   } else {
@@ -152,26 +170,17 @@ function callback_animacion_03(entries, observer) {
       title_animation_03.classList.remove("animacion-opacidad-no-visible");
       title_animation_03.classList.add("animacion-opacidad-visible");
 
-      // title_animation_04.classList.remove("animacion-opacidad-visible");
-      // title_animation_04.classList.add("animacion-opacidad-no-visible");
-
       description_animation_02.classList.remove("animacion-entrada-derecha");
       description_animation_02.classList.add("animacion-salida-derecha");
 
       description_animation_03.classList.remove("animacion-salida-derecha");
       description_animation_03.classList.add("animacion-entrada-derecha");
 
-      // description_animation_04.classList.remove("animacion-entrada-derecha");
-      // description_animation_04.classList.add("animacion-salida-derecha");
-
       img_animation_02.classList.remove("animacion-opacidad-visible");
       img_animation_02.classList.add("animacion-opacidad-no-visible");
 
       img_animation_03.classList.remove("animacion-opacidad-no-visible");
       img_animation_03.classList.add("animacion-opacidad-visible");
-
-      // img_animation_04.classList.remove("animacion-opacidad-visible");
-      // img_animation_04.classList.add("animacion-opacidad-no-visible");
 
       animacion_2_activation = true;
       animacion_3_activation = true;
@@ -196,6 +205,8 @@ function callback_animacion_03(entries, observer) {
       img_animation_03.classList.remove("animacion-opacidad-no-visible");
       img_animation_03.classList.add("animacion-opacidad-visible");
 
+      animacion_2_activation = true;
+
       animacion_3_activation = false;
       animacion_4_activation = false;
     }
@@ -215,9 +226,6 @@ function callback_animacion_04(entries, observer) {
       title_animation_04.classList.remove("animacion-opacidad-no-visible");
       title_animation_04.classList.add("animacion-opacidad-visible");
 
-      // title_animation_05.classList.remove("animacion-opacidad-visible");
-      // title_animation_05.classList.add("animacion-opacidad-no-visible");
-
       description_animation_03.classList.remove("animacion-entrada-derecha");
       description_animation_03.classList.add("animacion-salida-derecha");
 
@@ -229,13 +237,6 @@ function callback_animacion_04(entries, observer) {
 
       img_animation_04.classList.remove("animacion-opacidad-no-visible");
       img_animation_04.classList.add("animacion-opacidad-visible");
-
-      // img_animation_05.classList.remove(
-      //   "animacion-desplasamiento-entrada-derecha"
-      // );
-      // img_animation_05.classList.add(
-      //   "animacion-desplasamiento-entrada-derecha"
-      // );
 
       animacion_3_activation = true;
       animacion_4_activation = true;
@@ -261,6 +262,8 @@ function callback_animacion_04(entries, observer) {
 
       img_animation_04.classList.remove("animacion-opacidad-no-visible");
       img_animation_04.classList.add("animacion-opacidad-visible");
+
+      animacion_3_activation = true;
 
       animacion_4_activation = false;
       animacion_5_activation = false;
@@ -302,9 +305,9 @@ function callback_animacion_05(entries, observer) {
     } else {
       console.log("---> off animacion 5");
 
-      animacion_5_activation = false;
+      // animacion_5_activation = false;
     }
   } else {
-    // console.log("no Animar 4");
+    // console.log("no Animar 5");
   }
 }

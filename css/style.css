@@ -166,6 +166,7 @@ img {
   right: 10%;
 }
 
+#animation-title-01,
 #animation-title-02,
 #animation-title-03,
 #animation-title-04,
@@ -173,6 +174,7 @@ img {
   opacity: 0;
 }
 
+#animation-img-01,
 #animation-img-02,
 #animation-img-03,
 #animation-img-04,
@@ -206,16 +208,11 @@ img {
   z-index: 6;
 }
 
-/* #animation-description-05 {
-  word-spacing: 5px;
-  text-decoration: underline;
-  line-height: 30px;
-} */
-
 #animation-img-05 {
   width: 150%;
 }
 
+#animation-description-01,
 #animation-description-02,
 #animation-description-03,
 #animation-description-04,
