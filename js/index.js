@@ -1,6 +1,3 @@
-// importamos nuestros callback Intersection Observer
-// ./callback_IntersectionObserver.js
-
 // --> variables
 const $principal = document.querySelector("#principal");
 const $animacion_on_1 = document.querySelector("#animacion-on-1");
@@ -12,14 +9,12 @@ const $animacion_on_6 = document.querySelector("#animacion-on-6");
 
 // --> configuracion del IntersectionObserver
 const options = {
-  // root: document.querySelector('body'),
   rootMargin: "0px 0px 0px 0px",
-  threshold: 0.5, // 0.5
+  threshold: 0.5,
 };
 const options_big = {
-  // root: document.querySelector('body'),
   rootMargin: "0px 0px 0px 0px",
-  threshold: 1, // 0.5
+  threshold: 1,
 };
 
 // --> Establecer el IntersectionObserver
