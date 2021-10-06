@@ -76,9 +76,10 @@ footer p {
 }
 
 img {
-  width: 100%;
+  /* width: 100%;
   min-height: 350px;
-  max-height: 450px;
+  max-height: 450px; */
+  max-height: 80vh;
 }
 
 .sona-animacion-relativa {
