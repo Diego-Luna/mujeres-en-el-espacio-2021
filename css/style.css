@@ -66,7 +66,7 @@ footer {
   padding-top: 125px;
   background-image: url(../img/Footer.png);
   background-repeat: no-repeat;
-  background-position: 0 100px;
+  /* background-position: 0 100px; */
   background-size: cover;
 }
 
@@ -111,9 +111,9 @@ img {
 .tex-info {
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
-  max-width: 360px;
-  min-width: 300px;
+  width: 100%;
+  max-width: 450px;
+  min-width: 320px;
 }
 .tex-info p {
   width: 50%;
